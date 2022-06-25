@@ -5,10 +5,10 @@ public class Messages {
     private int id_receiver;
     private String message;
 
-    private Messages(int id_sender, int id_receiver, String message) {
-        this.id_sender = id_sender;
-        this.id_receiver = id_receiver;
-        this.message = message;
+    private Messages(MessagesBuilder messagesBuilder) {
+        this.id_sender = messagesBuilder.id_sender;
+        this.id_receiver = messagesBuilder.id_receiver;
+        this.message = messagesBuilder.message;
     }
 
     public int getId_sender() {
@@ -36,15 +36,21 @@ public class Messages {
     }
 
     public static class MessagesBuilder {
-        private int id_sender;
-        private int id_receiver;
+        private final int id_sender;
+        private final int id_receiver;
         private String message;
 
-        public MessagesBuilder(int id_sender, int id_receiver, String message) {
+        public MessagesBuilder(int id_sender, int id_receiver) {
             this.id_sender = id_sender;
             this.id_receiver = id_receiver;
-            this.message = message;
         }
 
+        public void setMessage(String message) {
+            this.message = message;
+        }
+        public Messages build() {
+            Messages messages = new Messages(this);
+            return messages;
+        }
     }
 }
