@@ -36,6 +36,15 @@ public class Messages {
     }
 
     public static class MessagesBuilder {
+        private int id_sender;
+        private int id_receiver;
+        private String message;
+
+        public MessagesBuilder(int id_sender, int id_receiver, String message) {
+            this.id_sender = id_sender;
+            this.id_receiver = id_receiver;
+            this.message = message;
+        }
 
     }
 }
