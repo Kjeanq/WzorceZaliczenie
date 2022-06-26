@@ -31,4 +31,5 @@ zalogowaniu się można czatować z innymi użytkownikami.
 
 - Singleton - klasa Database
 - Builder - klasa Messages
-- 
+- Composite - paczka message (database)
+- Observer - paczka convrefresh (backend)
