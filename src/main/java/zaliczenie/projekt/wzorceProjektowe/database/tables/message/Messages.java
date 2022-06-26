@@ -29,17 +29,6 @@ public class Messages extends MessagesComponent{
         System.out.println(getMessage());
     }
 
-    public void setId_sender(int id_sender) {
-        this.id_sender = id_sender;
-    }
-
-    public void setId_receiver(int id_receiver) {
-        this.id_receiver = id_receiver;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 
     public static class MessagesBuilder {
         private final int id_sender;

@@ -21,4 +21,10 @@ public class ChatWindowBackend {
         currentConversation.conversationEntry(refreshesThread);
     }
 
+    public void switchConversation(int conversationID) {
+        currentConversation = new CurrentConversation();
+        refreshesThread = new RefreshesThread(currentUserID, conversationID);
+        currentConversation.conversationEntry(refreshesThread);
+    }
+
 }

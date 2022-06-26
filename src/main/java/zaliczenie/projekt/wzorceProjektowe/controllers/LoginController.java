@@ -9,7 +9,7 @@ public class LoginController {
 
     @RequestMapping("/")
     public String getLogin(Model model) {
-        model.addAttribute("logowanie", "logowanie");
+        model.addAttribute("logowanie", "aaaa");
 
         return "login";
     }

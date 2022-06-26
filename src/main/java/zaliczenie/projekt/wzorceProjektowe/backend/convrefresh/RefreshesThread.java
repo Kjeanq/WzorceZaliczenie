@@ -15,6 +15,8 @@ public class RefreshesThread  implements Observer {
     @Override
     public void entry() {
         //Sprawdzenie odświerzenia w bazie
+        //wywołanie go
+
 //        Database.getInstance().checkRefresh(currentUserID, conversationID);
     }
 }
