@@ -5,9 +5,9 @@
 
 # Autorzy
 
-Jakub 10812 - programista  
-Alan 11834 - głupawy to wzięliśmy, umie tańczyć   
-Mirosław 11924 - siwi bajerant
+Jakub 10812 - Dyrektor  
+Alan 11834 - programista  
+Mirosław 11924 - projektant
 
 
 
