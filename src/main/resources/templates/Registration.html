@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+# th:object="${accountInfo}
+<form action="#" th:action="@{/a}" >
+    <input id="Login" type="text" name="Login" placeholder="Login" th:field=*{Login} maxlength=31 required>
+    <input id="Password" type="text" name="Password" placeholder="Password" th:field=*{Password} maxlength=31 required>
+    <input id="Passworde" type="text" name="Password" placeholder="Password" th:field=*{Password} maxlength=31 required>
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
 </body>
 </html>
