@@ -1,5 +1,8 @@
 package zaliczenie.projekt.wzorceProjektowe.database.tables;
 
+import zaliczenie.projekt.wzorceProjektowe.database.tables.message.Conversation;
+import zaliczenie.projekt.wzorceProjektowe.database.tables.message.MessagesComponent;
+
 public class Refreshes {
     int id_user;
     int refresh;

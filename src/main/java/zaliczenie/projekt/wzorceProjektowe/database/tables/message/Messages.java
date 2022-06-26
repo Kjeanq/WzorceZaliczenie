@@ -1,6 +1,6 @@
-package zaliczenie.projekt.wzorceProjektowe.database.tables;
+package zaliczenie.projekt.wzorceProjektowe.database.tables.message;
 
-public class Messages {
+public class Messages extends MessagesComponent{
     private int id_sender;
     private int id_receiver;
     private String message;
@@ -10,6 +10,7 @@ public class Messages {
         this.id_receiver = messagesBuilder.id_receiver;
         this.message = messagesBuilder.message;
     }
+
 
     public int getId_sender() {
         return id_sender;
@@ -21,6 +22,11 @@ public class Messages {
 
     public String getMessage() {
         return message;
+    }
+
+    @Override
+    public void displayMessages() {
+        System.out.println(getMessage());
     }
 
     public void setId_sender(int id_sender) {
@@ -49,8 +55,7 @@ public class Messages {
             this.message = message;
         }
         public Messages build() {
-            Messages messages = new Messages(this);
-            return messages;
+            return new Messages(this);
         }
     }
 }
