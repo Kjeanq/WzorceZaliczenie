@@ -1,10 +1,24 @@
 package zaliczenie.projekt.wzorceProjektowe.backend;
 
+
+import zaliczenie.projekt.wzorceProjektowe.backend.convrefresh.CurrentConversation;
+import zaliczenie.projekt.wzorceProjektowe.backend.convrefresh.Observer;
+import zaliczenie.projekt.wzorceProjektowe.backend.convrefresh.RefreshesThread;
+
 public class ChatWindowBackend {
 
-    RefreshesThread refreshesThread;
+    private int currentUserID;
+    private int conversationID;
 
-    public ChatWindowBackend(RefreshesThread refreshesThread) {
-        this.refreshesThread = refreshesThread;
+    private RefreshesThread refreshesThread;
+    private CurrentConversation currentConversation;
+
+    public ChatWindowBackend(int currentUserID, int conversationID) {
+        this.currentUserID = currentUserID;
+        this.conversationID = conversationID;
+        currentConversation = new CurrentConversation();
+        refreshesThread = new RefreshesThread(currentUserID, conversationID);
+        currentConversation.conversationEntry(refreshesThread);
     }
+
 }
